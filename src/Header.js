@@ -1,8 +1,14 @@
 import React from "react"
+import {Consumer} from "./themeContext"
 
 function Header() {
     return(
-        <p>я хедер</p>
+
+        <Consumer>
+           {context => (
+               <header className={`${context.theme}-theme`}>{context.theme === "dark" ? "Темная" : "Светлая"} тема</header>
+           )} 
+        </Consumer>
     )
 }
 
