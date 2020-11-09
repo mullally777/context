@@ -3,15 +3,15 @@ import React from "react"
 import './App.css';
 import Header from "./Header"
 import Button from "./Button"
-import {Provider} from "./themeContext"
+import {UserContextProvider} from "./userContext"
 
 function App() {
   return (
     <div>
-      <Provider>
+      <UserContextProvider>
         <Header />
         <Button />
-      </Provider>
+      </UserContextProvider>
     </div>
   )
 }

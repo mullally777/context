@@ -2,8 +2,9 @@ import React from "react"
 
 const {Provider, Consumer} = React.createContext()
 
-class themeContextProvider extends React.Component {
+class UserContextProvider extends React.Component {
     state = {
+        username: "TIMKA",
         theme: "dark"
     }
 
@@ -13,15 +14,21 @@ class themeContextProvider extends React.Component {
         })
     }
 
+    changeUserName = (newUserName) => {
+        this.setState({username: newUserName})
+    }
+
     render() {
-        return(
+        return (
             <Provider value={{
+                username: this.state.username,
                 theme: this.state.theme,
-                toggle: this.toggleTheme}}>
+                changeUserName: this.changeUserName,
+                switchTheme: this.toggleTheme}}>
                 {this.props.children}
             </Provider>
         )
     }
 }
 
-export {themeContextProvider as Provider, Consumer}
+export {UserContextProvider, Consumer as UserContextConsumer}

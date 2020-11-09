@@ -1,14 +1,14 @@
 import React from "react"
-import {Consumer} from "./themeContext"
+import {UserContextConsumer} from "./userContext"
 
 function Header() {
     return(
 
-        <Consumer>
+        <UserContextConsumer>
            {context => (
                <header className={`${context.theme}-theme`}>{context.theme === "dark" ? "Темная" : "Светлая"} тема</header>
            )} 
-        </Consumer>
+        </UserContextConsumer>
     )
 }
 
