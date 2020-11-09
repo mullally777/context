@@ -4,16 +4,16 @@ import './App.css';
 import Header from "./Header"
 import Button from "./Button"
 import MainContent from "./MainContent"
-import {Provider} from "./themeContext"
+import {UserContextProvider} from "./userContext"
 
 function App() {
   return (
     <div>
-      <Provider>
+      <UserContextProvider>
         <Header />
         <MainContent />
         <Button />
-      </Provider>
+      </UserContextProvider>
     </div>
   )
 }
