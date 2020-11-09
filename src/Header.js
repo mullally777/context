@@ -6,7 +6,10 @@ function Header() {
 
         <Consumer>
            {context => (
-               <header className={`${context.theme}-theme`}>{context.theme === "dark" ? "Темная" : "Светлая"} тема</header>
+               <header className={`${context.theme}-theme`}>
+                   <div>{context.theme === "dark" ? "Темная" : "Светлая"} тема</div>
+                   <div>TIMKA</div>
+                </header>
            )} 
         </Consumer>
     )
