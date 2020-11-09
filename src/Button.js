@@ -1,15 +1,13 @@
 import React from "react"
-import {Consumer} from "./themeContext"
+import {UserContextConsumer} from "./userContext"
 
 function Button() {
     return(
-        <Consumer>
-            
+        <UserContextConsumer>         
             {context => (
-                <button className={`${context.theme}-theme`} onClick={context.toggle}>Включить {context.theme === "dark" ? "светлую" : "темную"} тему</button>
+                <button className={`${context.theme}-theme`} onClick={context.switchTheme}>Включить {context.theme === "dark" ? "светлую" : "темную"} тему</button>
             )}
-            
-        </Consumer>
+        </UserContextConsumer>
     )
 }
 
