@@ -8,7 +8,7 @@ function Header() {
            {context => (
                <header className={`${context.theme}-theme`}>
                    <div>{context.theme === "dark" ? "Темная" : "Светлая"} тема</div>
-                   <div>TIMKA</div>
+                    <div>{context.username}</div>
                 </header>
            )} 
         </UserContextConsumer>

@@ -4,6 +4,7 @@ import './App.css';
 import Header from "./Header"
 import Button from "./Button"
 import MainContent from "./MainContent"
+import UsernameForm from "./UsernameForm"
 import {UserContextProvider} from "./userContext"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <UserContextProvider>
         <Header />
         <MainContent />
+        <UsernameForm />
         <Button />
       </UserContextProvider>
     </div>

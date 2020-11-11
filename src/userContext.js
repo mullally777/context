@@ -4,7 +4,7 @@ const {Provider, Consumer} = React.createContext()
 
 class UserContextProvider extends React.Component {
     state = {
-        username: "TIMKA",
+        username: "",
         theme: "dark"
     }
 
