@@ -1,8 +1,12 @@
 import React from "react"
+import {UserContextConsumer} from "./userContext"
 
 function MainContent() {
     return (
-        <h1>Hello, Timka</h1>
+        <UserContextConsumer>
+            {context => (<h1>Hello, {context.username}</h1>)}
+        </UserContextConsumer>
+        
     )
 }
 
