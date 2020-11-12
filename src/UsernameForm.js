@@ -25,7 +25,7 @@ class UsernameForm extends React.Component {
 
                 <UserContextConsumer>
                     {context => (
-                            <button className={`${context.theme}-theme`} onClick={context.switchTheme} onClick={() => context.changeUserName(this.state.username)}>Change</button>
+                            <button className={`${context.theme}-theme`} onClick={() => context.changeUserName(this.state.username)}>Change</button>
                         )
                     }
                 </UserContextConsumer>
